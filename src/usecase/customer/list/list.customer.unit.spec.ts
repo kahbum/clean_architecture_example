@@ -1,6 +1,6 @@
 import CustomerFactory from "../../../domain/customer/factory/customer.factory";
 import Address from "../../../domain/customer/value-object/address";
-import ListcustomerUseCase from "./list.customer.usecase";
+import ListCustomerUseCase from "./list.customer.usecase";
 
 const customer1 = CustomerFactory.createWithAddress(
     "John Doe",
@@ -25,7 +25,7 @@ describe("Unit test for listing customer use case", () => {
 
     it("should list all customers", async () => {
         const repository = MockRepository();
-        const useCase = new ListcustomerUseCase(repository);
+        const useCase = new ListCustomerUseCase(repository);
 
         const output = await useCase.execute({});
 
