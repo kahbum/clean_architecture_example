@@ -34,7 +34,6 @@ describe("E2E test for product", () => {
         const response = await request(app)
         .post("/product")
         .send(product);
-        console.log(response.body);
 
         expect(response.status).toBe(500);
     });
